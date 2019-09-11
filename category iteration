@@ -1,0 +1,9 @@
+# Try iterate through drawings for a group, viewing them, and pulling a specific index
+from quickdraw import QuickDrawDataGroup
+def iterate(list):
+    for word in list:
+        qdg = QuickDrawDataGroup("%s" %word)
+        for drawing in qdg.drawings:
+            print(drawing)
+
+iterate(objects_list)
