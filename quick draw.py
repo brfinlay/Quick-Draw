@@ -1,22 +1,22 @@
 from quickdraw import QuickDrawData
 qd = QuickDrawData()
 
-### Test run ###   
-# ant = qd.get_drawing("ant")
-# ant.image.save("/Users/brendafinlay/Documents/Cusack Lab/ant.gif")
+# n=269
+objects_list = ["angel", "ant", "bear", "bat", "bee", "bird", "butterfly", "camel", "cow", "crab", "crocodile", "dog", "dolphin", "dragon", "duck", "elephant", "cat", "campfire", "face", "fish", "flamingo", "frog", "giraffe", "hedgehog", "horse", "hurricane", "kangaroo", "lightning", "lion", "lobster", "mermaid", "monkey", "mosquito", "mouse", "ocean", "arm", "ear", "elbow", "eye", "leg", "nose", "mouth", "octopus", "owl", "panda", "parrot", "penguin", "pig", "rabbit", "raccoon", "rain", "rhinoceros", "river", "scorpion", "shark", "sheep", "snail", "snake", "spider", "squirrel", "star", "swan", "tiger", "toe", "tornado", "zebra", "windmill", "airplane", "ambulance", "anvil", "axe", "barn", "bathtub", "bed", "bench", "bicycle", "bridge", "bulldozer", "bus", "bush", "cactus", "cannon", "canoe", "car", "castle", "cello", "chair", "chandelier", "church", "cloud", "computer", "couch", "dishwasher", "door", "dresser", "fence", "fireplace", "garden", "helicopter", "hospital", "house", "jail", "ladder", "laptop", "lighthouse", "mailbox", "microwave", "moon", "mountain", "oven", "parachute", "piano", "pond", "pool", "rainbow", "sailboat", "sink", "skyscraper", "snowman", "speedboat", "stairs", "stove", "streetlight", "submarine", "suitcase", "sun", "sword", "table", "television", "tent", "toilet", "tractor", "train", "tree", "truck", "van", "whale", "wheel", "apple", "asparagus", "backpack", "banana", "bandage", "baseball", "basket", "basketball", "belt", "binoculars", "blackberry", "blueberry", "book", "boomerang", "bowtie", "bracelet", "brain", "bread", "broccoli", "broom", "bucket", "cake", "calculator", "calendar", "camera", "candle", "carrot", "clarinet", "clock", "compass", "cookie", "cooler", "crayon", "crown", "cup", "diamond", "drill", "dumbbell", "envelope", "eraser", "eyeglasses", "fan", "feather", "finger", "flashlight", "flower", "foot", "fork", "grass", "guitar", "hamburger", "hammer", "hand", "harp", "hat", "headphones", "helmet", "hourglass", "jacket", "key", "keyboard", "knee", "knife", "lantern", "leaf", "lighter", "lipstick", "lollipop", "map", "marker", "megaphone", "microphone", "motorbike", "mug", "mushroom", "nail", "necklace", "onion", "paintbrush", "pants", "passport", "peanut", "pear", "pencil", "pillow", "pineapple", "pizza", "pliers", "popsicle", "postcard", "potato", "purse", "radio", "rake", "rifle", "sandwich", "saw", "saxophone", "scissors", "screwdriver", "shoe", "shorts", "shovel", "skateboard", "skull", "snorkel", "snowflake", "sock", "spoon", "spreadsheet", "steak", "stereo", "stethoscope", "strawberry", "sweater", "syringe", "teapot", "telephone", "toaster", "tooth", "toothbrush", "toothpaste", "trombone", "trumpet", "umbrella", "underwear", "vase", "violin", "watermelon", "wristwatch"]
 
-all_objects = ["ant", "bee", "ear", "flamingo", "lion", "snail", "tiger", "zebra", "faces", "beaver", "cockroach", "fly", "goldfish", "goose", "gorilla", "grasshopper", "hamster", "hog", "koala", "ladybug", "otter", "ox", "peacock", "starfish", "triceratops", "wing", "ambulancce", "barn", "bathtub", "church", "mailbox", "stove", "television", "tractor", "bookcase", "crib", "desk", "jeep", "library", "pole", "racer", "refrigerator", "restaurant", "screen", "swing", "backpack", "banana", "baseball", "basketball", "broccoli", "broom", "bucket", "candle", "envelope", "hammer", "lipstick", "microphone", "nail", "necklace", "paintbrush", "pillow", "pineapple", "pizza", "radio", "screwdriver", "shovel", "sock", "strawberry", "teapot", "umbrella", "acorn", "balloon", "bib", "bow", "bubble", "cauliflower", "chain", "cheeseburger", "coffeepot", "cucumber", "daisy", "diaper", "drum", "gown", "hay", "hook", "hotdog", "jean", "kite", "knot", "lampshade", "lemon", "lotion", "mailbag", "mask", "mitten", "orange", "pajama", "pot", "pretzel", "safe", "sandal", "sunglass", "sunglasses", "sweatshirt", "tray", "wallet", "whistle", "wig"]
 
-#### This function pulls a random drawing for each word ####
+#### This function pulls a random drawing that was successfully identified for each word ####
+# Index was changed to get images 1-10 an saved into respective index1-10 folders in Quick_Draw
 def get_image(list):
     for word in list:
-        w = qd.get_drawing("%s" %word)
+        w = qd.get_drawing("%s" %word, index=10)
         if w.recognized == True:
-            w.image.save("/Users/brendafinlay/Documents/Cusack Lab/Quick_Draw/%s.gif" %word)
+            w.image.save("/Users/brendafinlay/Documents/Cusack_Lab/index 10/%s.gif" %word)
 
-get_image(all_objects)
+get_image(objects_list)
 
-# dodgy_drawings = ["ant", "ear", "lion", "tiger", "zebra"]
 
-# def correct_image(list):
+
+
+
 
