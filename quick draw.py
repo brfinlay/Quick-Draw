@@ -6,7 +6,7 @@ objects_list = ["angel", "ant", "bear", "bat", "bee", "bird", "butterfly", "came
 included = ["beach", "beard", "goatee", "moustache"]
 
 #### This function pulls a random drawing that was successfully identified for each word ####
-# Index was changed to get images 1-10 and saved into respective index1-20 folders in Quick_Draw -> Transferred to USB stick
+# Index was changed to get images 1-20 and saved into respective index1-20 folders in Quick_Draw -> Transferred to USB stick
 def get_image(list):
     for word in list:
         w = qd.get_drawing("%s" %word, index=20)
